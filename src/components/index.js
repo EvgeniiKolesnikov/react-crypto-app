@@ -5,3 +5,4 @@ export * from './Exchanges';
 export * from './Cryptocurrencies';
 export * from './CryptoDetails';
 export * from './News';
+export * from './LineChart';
