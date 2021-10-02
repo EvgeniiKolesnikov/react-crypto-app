@@ -1,3 +1,4 @@
-export const RAPIDAPI_HOST = process.env.REACT_APP_RAPIDAPI_HOST;
-export const RAPIDAPI_KEY = process.env.REACT_APP_RAPIDAPI_KEY;
+const RAPIDAPI_HOST = process.env.REACT_APP_RAPIDAPI_HOST;
+const RAPIDAPI_KEY = process.env.REACT_APP_RAPIDAPI_KEY;
 
+export { RAPIDAPI_HOST, RAPIDAPI_KEY };
