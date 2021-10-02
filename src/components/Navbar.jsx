@@ -32,7 +32,7 @@ export const Navbar = () => {
         <Typography.Title level={2} className='logo'>
           <Link to='/'>Crypto</Link>
         </Typography.Title>
-        <Button 
+        <Button
           className='menu-control-container'
           onClick={() => setActiveMenu(!activeMenu)}
         >
@@ -58,5 +58,3 @@ export const Navbar = () => {
     </div>
   );
 };
-
-// export default Navbar;
