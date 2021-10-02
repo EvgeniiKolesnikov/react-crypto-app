@@ -40,7 +40,7 @@ export const Navbar = () => {
         </Button>
       </div>
       {activeMenu && (
-        <Menu theme='dark' onClick={() => setActiveMenu(false)}>
+        <Menu theme='dark'>
           <Menu.Item key='1' icon={<HomeOutlined />}>
             <Link to='/'>Home</Link>
           </Menu.Item>

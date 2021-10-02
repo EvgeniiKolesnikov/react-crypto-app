@@ -9,7 +9,7 @@ import store from './app/store';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
+    <Router basename='/react-crypto-app'>
       <Provider store={store}>
         <App />
       </Provider>
