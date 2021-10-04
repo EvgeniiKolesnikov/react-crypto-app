@@ -1,3 +1,9 @@
+import { useState } from 'react';
+import { useParams } from 'react-router-dom';
+import {
+  useGetCryptoDetailsQuery,
+  useGetCryptoHistoryQuery,
+} from '../services/cryptoApi';
 import {
   MoneyCollectOutlined,
   DollarCircleOutlined,
@@ -9,18 +15,11 @@ import {
   TrophyOutlined,
   ThunderboltOutlined,
 } from '@ant-design/icons';
-import { Col, Row, Select, Typography } from 'antd';
+import { Col, Row, Select } from 'antd';
 import HTMLReactParser from 'html-react-parser';
 import millify from 'millify';
-import { useState } from 'react';
-import { useParams } from 'react-router-dom';
-import {
-  useGetCryptoDetailsQuery,
-  useGetCryptoHistoryQuery,
-} from '../services/cryptoApi';
 import { LineChart, Loader } from '.';
 
-const { Text, Title } = Typography;
 const { Option } = Select;
 
 export const CryptoDetails = () => {
@@ -98,9 +97,9 @@ export const CryptoDetails = () => {
   return (
     <Col className='coin-detail-container'>
       <Col className='coin-heading-container'>
-        <Title level={2} className='coin-name'>
+        <h2 className='ant-typography coin-name'>
           {data?.data?.coin.name} ({data?.data?.coin.slug}) Price
-        </Title>
+        </h2>
         <p>
           {cryptoDetails.name} live price in US Dollar (USD). View value
           statistics, market cap and supply.
@@ -126,9 +125,9 @@ export const CryptoDetails = () => {
       <Col className='stats-container'>
         <Col className='coin-value-statistics'>
           <Col className='coin-value-statistics-heading'>
-            <Title level={3} className='coin-details-heading'>
+            <h3 className='ant-typography coin-details-heading'>
               {cryptoDetails.name} Value Statistics
-            </Title>
+            </h3>
             <p>
               An overview showing the statistics of {cryptoDetails.name}, such
               as the base and quote currency, the rank, and trading volume.
@@ -137,18 +136,18 @@ export const CryptoDetails = () => {
           {stats.map(({ icon, title, value }, i) => (
             <Col className='coin-stats' key={i}>
               <Col className='coin-stats-name'>
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <span className='ant-typography'>{icon}</span>
+                <span className='ant-typography'>{title}</span>
               </Col>
-              <Text className='stats'>{value}</Text>
+              <span className='ant-typography stats'>{value}</span>
             </Col>
           ))}
         </Col>
         <Col className='other-stats-info'>
           <Col className='coin-value-statistics-heading'>
-            <Title level={3} className='coin-details-heading'>
+            <h3 className='ant-typography coin-details-heading'>
               Other Stats Info
-            </Title>
+            </h3>
             <p>
               An overview showing the statistics of {cryptoDetails.name}, such
               as the base and quote currency, the rank, and trading volume.
@@ -157,10 +156,10 @@ export const CryptoDetails = () => {
           {genericStats.map(({ icon, title, value }, i) => (
             <Col className='coin-stats' key={i}>
               <Col className='coin-stats-name'>
-                <Text>{icon}</Text>
-                <Text>{title}</Text>
+                <span className='ant-typography'>{icon}</span>
+                <span className='ant-typography'>{title}</span>
               </Col>
-              <Text className='stats'>{value}</Text>
+              <span className='ant-typography stats'>{value}</span>
             </Col>
           ))}
         </Col>
@@ -168,20 +167,20 @@ export const CryptoDetails = () => {
 
       <Col className='coin-desc-link'>
         <Row className='coin-desc'>
-          <Title level={3} className='coin-details-heading'>
+          <h3 className='ant-typography coin-details-heading'>
             What is {cryptoDetails.name}?
-          </Title>
+          </h3>
           {HTMLReactParser(cryptoDetails.description)}
         </Row>
         <Col className='coin-links'>
-          <Title level={3} className='coin-details-heading'>
+          <h3 className='ant-typography coin-details-heading'>
             {cryptoDetails.name} Links
-          </Title>
+          </h3>
           {cryptoDetails.links?.map((link, i) => (
             <Row className='coin-link' key={i}>
-              <Title level={5} className='link-name'>
+              <h5 className='ant-typography link-name'>
                 {link.type}
-              </Title>
+              </h5>
               <a href={link.url} target='_blank' rel='noreferrer'>
                 {link.name}
               </a>

@@ -1,12 +1,9 @@
-import millify from 'millify';
-import { Collapse, Row, Col, Typography, Avatar } from 'antd';
-import HTMLReactParser from 'html-react-parser';
-
+import { Collapse, Row, Col, Avatar } from 'antd';
 import { useGetExchangesQuery } from '../services/cryptoApi';
-
+import HTMLReactParser from 'html-react-parser';
+import millify from 'millify';
 import { Loader } from '.';
 
-const { Text } = Typography;
 const { Panel } = Collapse;
 
 export const Exchanges = () => {
@@ -34,16 +31,16 @@ export const Exchanges = () => {
                 header={
                   <Row key={exchange.id}>
                     <Col span={6}>
-                      <Text>
+                      <span className='ant-typography'>
                         <strong>{exchange.rank}.</strong>
-                      </Text>
+                      </span>
                       <Avatar
                         className='exchange-image'
                         src={exchange.iconUrl}
                       />
-                      <Text>
+                      <span className='ant-typography'>
                         <strong>{exchange.name}</strong>
-                      </Text>
+                      </span>
                     </Col>
                     <Col span={6}>${millify(exchange.volume)}</Col>
                     <Col span={6}>{millify(exchange.numberOfMarkets)}</Col>

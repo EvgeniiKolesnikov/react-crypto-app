@@ -1,9 +1,9 @@
-import { Card, Col, Input, Row } from 'antd';
-import millify from 'millify';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { Loader } from '.';
 import { useGetCryptosQuery } from '../services/cryptoApi';
+import { Card, Col, Input, Row } from 'antd';
+import { Link } from 'react-router-dom';
+import millify from 'millify';
+import { Loader } from '.';
 
 export const Cryptocurrencies = ({ simplified }) => {
   const count = simplified ? 10 : 100;

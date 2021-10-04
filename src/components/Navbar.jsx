@@ -1,4 +1,4 @@
-import { Avatar, Button, Menu, Typography } from 'antd';
+import { Avatar, Button, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 import {
   HomeOutlined,
@@ -29,9 +29,9 @@ export const Navbar = () => {
     <div className='nav-container'>
       <div className='logo-container'>
         <Avatar src={icon} size='large' />
-        <Typography.Title level={2} className='logo'>
+        <h2 className='ant-typography logo'>
           <Link to='/'>Crypto</Link>
-        </Typography.Title>
+        </h2>
         <Button
           className='menu-control-container'
           onClick={() => setActiveMenu(!activeMenu)}

@@ -1,11 +1,10 @@
-import { Avatar, Card, Col, Row, Select, Typography } from 'antd';
-import moment from 'moment';
+import { Avatar, Card, Col, Row, Select } from 'antd';
 import { useState } from 'react';
-import { Loader } from '.';
 import { useGetCryptosQuery } from '../services/cryptoApi';
 import { useGetCryptoNewsQuery } from '../services/cryptoNewsApi';
+import moment from 'moment';
+import { Loader } from '.';
 
-const { Text, Title } = Typography;
 const { Option } = Select;
 
 const demoImage =
@@ -47,9 +46,9 @@ export const News = ({ simplified }) => {
           <Card hoverable className='news-card'>
             <a href={news.url} target='_blank' rel='noreferrer'>
               <div className='news-image-container'>
-                <Title level={4} className='news-title'>
+              <h4 className='ant-typography news-title'>
                   {news.name}
-                </Title>
+                </h4>
                 <img
                   style={{ maxWidth: '200px', maxHeight: '100px' }}
                   src={news?.image?.thumbnail?.contentUrl || demoImage}
@@ -70,13 +69,13 @@ export const News = ({ simplified }) => {
                     }
                     alt='news'
                   />
-                  <Text className='provider-name'>
+                  <span className='ant-typography provider-name'>
                     {news.provider[0]?.name}
-                  </Text>
+                  </span>
                 </div>
-                <Text>
+                <span className='ant-typography' >
                   {moment(news.datePublished).startOf('ss').fromNow()}
-                </Text>
+                </span>
               </div>
             </a>
           </Card>

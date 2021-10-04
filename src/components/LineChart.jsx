@@ -1,7 +1,5 @@
 import { Line } from 'react-chartjs-2';
-import { Col, Row, Typography } from 'antd';
-
-const { Title } = Typography;
+import { Col, Row } from 'antd';
 
 export const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   const coinPrice = [];
@@ -42,16 +40,16 @@ export const LineChart = ({ coinHistory, currentPrice, coinName }) => {
   return (
     <>
       <Row className='chart-header'>
-        <Title level={2} className='chart-title'>
+        <h2 className='ant-typography chart-title'>
           {coinName} Price Chart{' '}
-        </Title>
+        </h2>
         <Col className='price-container'>
-          <Title level={5} className='price-change'>
+          <h5 className='ant-typography price-change'>
             Change: {coinHistory?.data?.change}%
-          </Title>
-          <Title level={5} className='current-price'>
+          </h5>
+          <h5 className='ant-typography current-price'>
             Current {coinName} Price: $ {currentPrice}
-          </Title>
+          </h5>
         </Col>
       </Row>
       <Line data={data} options={options} />

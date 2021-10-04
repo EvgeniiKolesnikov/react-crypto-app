@@ -1,10 +1,8 @@
-import { Col, Row, Statistic, Typography } from 'antd';
-import millify from 'millify';
+import { Col, Row, Statistic } from 'antd';
 import { Link } from 'react-router-dom';
-import { Cryptocurrencies, Loader, News } from '.';
 import { useGetCryptosQuery } from '../services/cryptoApi';
-
-const { Title } = Typography;
+import millify from 'millify';
+import { Cryptocurrencies, Loader, News} from '.';
 
 export const Homepage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
@@ -15,9 +13,9 @@ export const Homepage = () => {
 
   return (
     <>
-      <Title level={2} className='heading'>
+      <h2 className='ant-typography  heading'>
         Global Crypto Stats
-      </Title>
+      </h2>
       <Row>
         <Col span={12}>
           <Statistic title='Total Cryptocurrencies' value={globalStats.total} />
@@ -49,22 +47,22 @@ export const Homepage = () => {
       </Row>
 
       <div className='home-heading-container'>
-        <Title level={2} className='home-title'>
+        <h2 className='ant-typography home-title'>
           Top 10 Cryptocurrencies in the world
-        </Title>
-        <Title level={3} className='show-more'>
+        </h2>
+        <h3 className='ant-typography show-more'>
           <Link to='/cryptocurrencies'>Show more</Link>
-        </Title>
+        </h3>
       </div>
       <Cryptocurrencies simplified />
 
       <div className='home-heading-container'>
-        <Title level={2} className='home-title'>
+        <h2 className='ant-typography home-title'>
           Latest Crypto News
-        </Title>
-        <Title level={3} className='show-more'>
+        </h2>
+        <h3 className='ant-typography show-more'>
           <Link to='/news'>Show more</Link>
-        </Title>
+        </h3>
       </div>
       <News simplified />
 

@@ -1,16 +1,15 @@
-import React from 'react';
-import {
-  Cryptocurrencies,
-  CryptoDetails,
-  Exchanges,
-  Homepage,
-  Navbar,
-  News,
-} from './components';
-import './App.css';
-import { Layout, Space, Typography } from 'antd';
-import { Route, Switch } from 'react-router';
+// import Cryptocurrencies from './components/Cryptocurrencies';
+// import CryptoDetails from './components/CryptoDetails';
+// import Exchanges from './components/Exchanges';
+// import Homepage from './components/Homepage';
+// import Navbar from './components/Navbar';
+// import News from './components/News';
+
+import { Layout, Space } from 'antd';
 import { Link } from 'react-router-dom';
+import { Route, Switch } from 'react-router';
+import './App.css';
+import { Cryptocurrencies, CryptoDetails, Exchanges, Homepage, Navbar, News } from './components';
 
 const App = () => {
   return (
@@ -40,16 +39,14 @@ const App = () => {
             </Switch>
           </div>
         </Layout>
-
+        
         <div className='footer'>
-          <Typography.Title
-            level={5}
+          <h5 className='ant-typography'
             style={{ textAlign: 'center', color: 'white' }}
           >
             Crypto <br />
-            All rights not reserved.
-          </Typography.Title>
-
+            All rights not reserved. 
+          </h5>
           <Space>
             <Link to='/'>Home</Link>
             <Link to='/exchanges'>Exchanges</Link>
