@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-crypto-app/static/css/main.564b5147.chunk.css",
-    "main.js": "/react-crypto-app/static/js/main.2960da06.chunk.js",
-    "main.js.map": "/react-crypto-app/static/js/main.2960da06.chunk.js.map",
+    "main.js": "/react-crypto-app/static/js/main.ab58cd24.chunk.js",
+    "main.js.map": "/react-crypto-app/static/js/main.ab58cd24.chunk.js.map",
     "runtime-main.js": "/react-crypto-app/static/js/runtime-main.4a261d33.js",
     "runtime-main.js.map": "/react-crypto-app/static/js/runtime-main.4a261d33.js.map",
     "static/css/2.a95be28f.chunk.css": "/react-crypto-app/static/css/2.a95be28f.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.a95be28f.chunk.css",
     "static/js/2.517342b2.chunk.js",
     "static/css/main.564b5147.chunk.css",
-    "static/js/main.2960da06.chunk.js"
+    "static/js/main.ab58cd24.chunk.js"
   ]
 }
